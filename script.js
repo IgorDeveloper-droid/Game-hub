@@ -9,7 +9,7 @@ const gamesData = [
         release: '2022',
         trophies: { platinum: 1, gold: 2, silver: 10, bronze: 32 },
         totalTrophies: 45,
-        img: 'https://via.placeholder.com/350x200/1a1a2e/00ff88?text=God+of+War+Ragnarök',
+        img: 'https://imgs.search.brave.com/541l4Vsli3nY-Zhb2molU_HHZ2BwAhA5jLfdgaFbA60/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtcHJkLmlnbmlt/Z3MuY29tLzIwMjEv/MDkvMDkvZ29kLW9m/LXdhci1yYWduYXJv/ay1idXR0b24tMTYz/MTIzMTg3OTE1NC5q/cGc_Y3JvcD0xOjEs/c21hcnQmZm9ybWF0/PWpwZyZhdXRvPXdl/YnAmcXVhbGl0eT04/MA',
         description: 'A épica saga nórdica continua com Kratos e Atreus enfrentando Ragnarök.',
         detonado_summary: '46 troféus - Guia com todos os Favores, Nornir Chests e Crater Bosses.',
         curiosidades: ['DLC Valhalla é gratuito', 'Mais de 38 horas de história principal'],
