@@ -24,7 +24,7 @@ const gamesData = [
         release: '2013',
         trophies: { platinum: 1, gold: 3, silver: 15, bronze: 48 },
         totalTrophies: 67,
-        img: 'https://via.placeholder.com/350x200/16213f/00ff88?text=GTA+V',
+        img: 'https://i.pinimg.com/736x/27/7e/55/277e551fe8d33b67ec51ba6365964dce.jpg',
         description: 'Mundo aberto definitivo da Rockstar com 3 protagonistas.',
         detonado_summary: 'Guia 100% - 69 troféus, todas missões secundárias, propriedades.',
         curiosidades: ['Mais vendido da história', 'GTA Online ainda recebe updates'],
