@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">GamesHub</div>
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" id="search" placeholder="Buscar games, troféus, guias...">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link active" data-section="home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#games" class="nav-link" data-section="games"><i class="fas fa-gamepad"></i> Games</a></li>
+                    <li><a href="#trophies" class="nav-link" data-section="trophies"><i class="fas fa-trophy"></i> Troféus</a></li>
+                    <li><a href="#guides" class="nav-link" data-section="guides"><i class="fas fa-book"></i> Guias</a></li>
+                    <li><a href="#news" class="nav-link" data-section="news"><i class="fas fa-newspaper"></i> Notícias</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero section active">
+        <div class="container">
+            <h1>Seu Portal Completo de Games</h1>
+            <p>Guias de troféus detalhados, detonados completos, tutoriais, notícias de lançamentos e novidades do mundo dos games em um só lugar.</p>
+            <a href="#games" class="btn">Explorar Games</a>
+        </div>
+    </section>
+
+    <section id="games" class="section">
+        <div class="container">
+            <h2 class="section-title">Catálogo de Games</h2>
+            <div class="grid">
+                <!-- Games renderizados via JS -->
+            </div>
+        </div>
+    </section>
+
+    <section id="trophies" class="section">
+        <div class="container">
+            <h2 class="section-title">Guias de Troféus</h2>
+            <p style="text-align:center;color:var(--text-secondary);margin-bottom:3rem;">Taxa de conquista e guias passo a passo para Platina!</p>
+            <div class="grid">
+                <!-- Trophies renderizados via JS -->
+            </div>
+        </div>
+    </section>
+
+    <section id="guides" class="section">
+        <div class="container">
+            <h2 class="section-title">Detonados e Tutoriais</h2>
+            <p style="text-align:center;color:var(--text-secondary);margin-bottom:3rem;">Guias completos 100% e tutoriais detalhados</p>
+            <div class="grid">
+                <!-- Guides renderizados via JS -->
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="section">
+        <div class="container">
+            <h2 class="section-title">Últimas Notícias</h2>
+            <p style="text-align:center;color:var(--text-secondary);margin-bottom:3rem;">Lançamentos, trailers e novidades do mundo gamer</p>
+            <div class="grid">
+                <!-- News renderizados via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&amp;times;</span>
+            <h2 id="modalTitle"></h2>
+<div class="tabs">
+                <button class="tab-btn active" data-tab="description">Descrição</button>
+                <button class="tab-btn" data-tab="trophies">Troféus</button>
+                <button class="tab-btn" data-tab="detonado">Detonado</button>
+                <button class="tab-btn" data-tab="curiosidades">Curiosidades</button>
+                <button class="tab-btn" data-tab="tutorial">Tutoriais</button>
+            </div>
+            <div id="description" class="tab-content active">
+                <p id="modalDescription"></p>
+            </div>
+            <div id="trophies" class="tab-content">
+                <div id="modalTrophies"></div>
+            </div>
+            <div id="detonado" class="tab-content">
+                <p id="modalDetonado"></p>
+            </div>
+            <div id="curiosidades" class="tab-content">
+                <ul id="modalCuriosidades"></ul>
+            </div>
+            <div id="tutorial" class="tab-content">
+                <ul id="modalTutorial"></ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-twitch"></i> Twitch</a>
+                <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                <a href="#"><i class="fab fa-discord"></i> Discord</a>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            </div>
+            <p>&amp;copy; 2024 GamesHub. Todos os direitos reservados. | Feito com <i class="fas fa-gamepad"></i></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
