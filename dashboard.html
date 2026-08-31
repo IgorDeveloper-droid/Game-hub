@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hub | Painel</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="dashboard.js" defer></script>
+</head>
+<body>
+    <main class="dashboard">
+        <header class="topbar">
+            <a class="brand" href="dashboard.html"><span class="brand-mark">+</span> GAME HUB</a>
+            <button id="logoutButton" type="button">Sair</button>
+        </header>
+        <section class="welcome">
+            <p class="eyebrow">ÁREA DO JOGADOR</p>
+            <h1>Olá, <span id="username"></span>.</h1>
+            <p>Seu próximo jogo começa aqui.</p>
+        </section>
+        <section class="game-grid" aria-label="Seus jogos">
+            <article><span>01</span><h2>Aventura</h2><p>Continue sua jornada.</p></article>
+            <article><span>02</span><h2>Estratégia</h2><p>Planeje o próximo movimento.</p></article>
+            <article><span>03</span><h2>Arcade</h2><p>Bata seu recorde.</p></article>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal oficial de serviços, notícias e informações da Prefeitura de São Paulo.">
+  <meta name="theme-color" content="#063b3b">
+  <title>Prefeitura de São Paulo | Portal oficial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="prefeitura.css">
+    <style>
+      .sao-paulo-flag{background:#fff;border:1px solid rgba(16,47,47,.25);display:flex;flex-direction:column;height:30px;justify-content:space-between;margin-left:3px;overflow:hidden;position:relative;width:45px}
+      .sao-paulo-flag i{display:block;height:3px;width:100%}
+      .sao-paulo-flag i:first-child{background:#173f8a}
+      .sao-paulo-flag i:nth-child(2){background:#fff;border-bottom:1px solid #d7d7d7;border-top:1px solid #d7d7d7;height:20px}
+      .sao-paulo-flag i:last-of-type{background:#b52c35}
+      .sao-paulo-flag b{color:#173f8a;font:700 9px/1 'DM Sans',sans-serif;left:50%;position:absolute;top:50%;transform:translate(-50%,-50%)}
+      @media(max-width:800px){.sao-paulo-flag{height:26px;width:39px}.sao-paulo-flag i:nth-child(2){height:17px}}
+    </style>
+  <script src="prefeitura.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="utility-bar"><div class="container utility-inner"><span>Portal oficial da cidade de São Paulo</span><nav aria-label="Links rápidos"><a href="#servicos">Serviços</a><a href="#noticias">Notícias</a><a href="#contato">Fale com a Prefeitura</a></nav></div></div>
+    <div class="container header-main">
+      <a class="brand" href="prefeitura.html" aria-label="Prefeitura de São Paulo, início"><span class="brand-symbol">SP</span><span><strong>Prefeitura</strong><small>de São Paulo</small></span><span class="sao-paulo-flag" role="img" aria-label="Bandeira do estado de São Paulo"><i></i><i></i><i></i><b>SP</b></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">☰</span></button>
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal"><a href="#servicos">Serviços</a><a href="#cidade">A cidade</a><a href="#noticias">Notícias</a><a href="#agenda">Agenda</a><a href="#transparencia">Transparência</a></nav>
+      <button class="accessibility-button" type="button" id="contrastToggle" aria-pressed="false" title="Alternar alto contraste">◐ <span>Contraste</span></button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero"><div class="container hero-content"><p class="eyebrow">Bem-vindo ao portal paulistano</p><h1>Serviços públicos<br><em>mais perto de você.</em></h1><p class="hero-copy">Encontre informações, resolva pendências e acompanhe tudo o que acontece na cidade.</p><form class="search-form" id="searchForm" role="search"><label class="sr-only" for="siteSearch">O que você procura?</label><input id="siteSearch" type="search" placeholder="O que você procura? Ex.: IPTU, bilhete único..." autocomplete="off"><button type="submit">Buscar <span aria-hidden="true">↗</span></button></form><p class="search-status" id="searchStatus" aria-live="polite"></p></div><div class="hero-stamp" aria-hidden="true"><span>cidade</span><strong>SP</strong><span>presente</span></div></section>
+
+    <section class="section services-section" id="servicos"><div class="container"><div class="section-heading"><div><p class="eyebrow">Resolva online</p><h2>Serviços em destaque</h2></div><a class="text-link" href="#servicos">Ver todos os serviços <span>→</span></a></div><div class="service-grid"><a class="service-card service-featured" href="#contato"><span class="service-icon">▣</span><span class="service-number">01</span><h3>Portal do cidadão</h3><p>Acesse seus documentos, protocolos e serviços em um só lugar.</p><span class="card-arrow">↗</span></a><a class="service-card" href="#contato"><span class="service-icon">▤</span><span class="service-number">02</span><h3>IPTU</h3><p>Consulte débitos, emita sua segunda via e confira datas.</p><span class="card-arrow">↗</span></a><a class="service-card" href="#contato"><span class="service-icon">♧</span><span class="service-number">03</span><h3>Bilhete Único</h3><p>Consulte saldo, recarregue e solicite seu cartão.</p><span class="card-arrow">↗</span></a><a class="service-card" href="#contato"><span class="service-icon">⚑</span><span class="service-number">04</span><h3>Iluminação pública</h3><p>Registre um pedido de manutenção na sua rua.</p><span class="card-arrow">↗</span></a></div></div></section>
+
+    <section class="section city-section" id="cidade"><div class="container city-grid"><div><p class="eyebrow">São Paulo em movimento</p><h2>Uma cidade feita<br>de muitas <em>histórias.</em></h2></div><div class="city-copy"><p>São Paulo é trabalho, cultura, encontro e transformação. Aqui, cada bairro tem um ritmo e cada pessoa ajuda a construir o futuro da maior cidade do país.</p><a class="button button-light" href="#agenda">Conheça a cidade <span>→</span></a></div></div></section>
+
+    <section class="section news-section" id="noticias"><div class="container"><div class="section-heading"><div><p class="eyebrow">Acompanhe</p><h2>Últimas notícias</h2></div><a class="text-link" href="#noticias">Todas as notícias <span>→</span></a></div><div class="news-grid"><article class="news-card"><div class="news-image image-mobility"><span>Mobilidade</span></div><div class="news-body"><time datetime="2026-08-25">25 ago 2026</time><h3>Novas ações ampliam a mobilidade ativa na cidade</h3><a href="#noticias" aria-label="Ler notícia sobre mobilidade">Ler notícia ↗</a></div></article><article class="news-card"><div class="news-image image-culture"><span>Cultura</span></div><div class="news-body"><time datetime="2026-08-22">22 ago 2026</time><h3>Programação cultural ocupa parques neste fim de semana</h3><a href="#noticias" aria-label="Ler notícia sobre cultura">Ler notícia ↗</a></div></article><article class="news-card"><div class="news-image image-care"><span>Bem-estar</span></div><div class="news-body"><time datetime="2026-08-19">19 ago 2026</time><h3>Rede de atendimento oferece novos horários de acolhimento</h3><a href="#noticias" aria-label="Ler notícia sobre bem-estar">Ler notícia ↗</a></div></article></div></div></section>
+
+    <section class="section agenda-section" id="agenda"><div class="container agenda-grid"><div><p class="eyebrow">Não fique de fora</p><h2>O que acontece<br><em>em São Paulo.</em></h2></div><div class="agenda-list"><a href="#agenda" class="agenda-item"><time><strong>29</strong><span>AGO</span></time><span><small>Vila Mariana</small><b>Feira de artes e sabores</b></span><span class="agenda-arrow">→</span></a><a href="#agenda" class="agenda-item"><time><strong>30</strong><span>AGO</span></time><span><small>Centro</small><b>Virada esportiva paulistana</b></span><span class="agenda-arrow">→</span></a><a href="#agenda" class="agenda-item"><time><strong>05</strong><span>SET</span></time><span><small>Mooca</small><b>Mutirão de zeladoria urbana</b></span><span class="agenda-arrow">→</span></a></div></div></section>
+
+    <section class="newsletter" id="contato"><div class="container newsletter-inner"><div><p class="eyebrow">Fique por dentro</p><h2>Receba a cidade<br>na sua caixa de entrada.</h2></div><form class="subscribe-form" id="subscribeForm"><label class="sr-only" for="email">Seu melhor e-mail</label><input id="email" name="email" type="email" placeholder="Seu melhor e-mail" required><button type="submit">Inscrever-se <span>↗</span></button><p id="subscribeStatus" aria-live="polite"></p></form></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-grid"><a class="brand brand-footer" href="prefeitura.html"><span class="brand-symbol">SP</span><span><strong>Prefeitura</strong><small>de São Paulo</small></span></a><div><p>Atendimento</p><a href="#contato">156 · Central de atendimento</a><a href="#contato">Fale com a Prefeitura</a></div><div><p>Institucional</p><a href="#transparencia">Portal da transparência</a><a href="#cidade">Sobre São Paulo</a></div><div><p>Redes oficiais</p><a href="#contato">Instagram · Facebook · X</a></div></div><div class="container footer-bottom"><span>© 2026 Prefeitura de São Paulo</span><span>Portal oficial · Acessibilidade</span></div></footer>
+</body>
+</html>

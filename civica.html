@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cívica Ops: central inteligente para operação de serviços urbanos.">
+  <title>Cívica Ops | Operação urbana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="civica.css">
+  <script src="civica.js" defer></script>
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar">
+      <a class="logo" href="civica.html"><span class="logo-mark">+</span><span>CÍVICA<small>OPS PLATFORM</small></span></a>
+      <nav class="side-nav" aria-label="Navegação do produto"><p>Workspace</p><a class="active" href="#overview"><span>◈</span> Visão geral</a><a href="#requests"><span>▣</span> Solicitações <b>12</b></a><a href="#map"><span>⌖</span> Mapa de ocorrências</a><a href="#teams"><span>◌</span> Equipes</a><p>Gestão</p><a href="#analytics"><span>◒</span> Indicadores</a><a href="#integrations"><span>⌘</span> Integrações</a></nav>
+      <div class="sidebar-bottom"><div class="status"><i></i><span><strong>Sistemas operacionais</strong><small>Última sincronização há 2 min</small></span></div><button class="profile" type="button"><span class="avatar">MC</span><span><strong>Marina Costa</strong><small>Admin · São Paulo</small></span><span>···</span></button></div>
+    </aside>
+    <main class="main-content" id="overview">
+      <header class="topbar"><button class="mobile-menu" id="mobileMenu" type="button" aria-label="Abrir menu">☰</button><div class="breadcrumbs"><span>Workspace</span><b>/</b><strong>Visão geral</strong></div><div class="top-actions"><button class="round-button" type="button" title="Notificações" aria-label="Notificações">♢<i></i></button><button class="help-button" type="button">?</button></div></header>
+      <div class="page-content">
+        <section class="intro"><div><p class="overline">QUARTA-FEIRA, 28 DE AGOSTO DE 2026</p><h1>Bom dia, Marina <span>↗</span></h1><p class="intro-copy">Aqui está o pulso da operação urbana hoje.</p></div><button class="primary-button" id="newRequest" type="button"><span>+</span> Nova solicitação</button></section>
+        <section class="metric-grid" aria-label="Indicadores principais"><article class="metric-card"><div class="metric-top"><span>Solicitações abertas</span><span class="metric-icon coral">◈</span></div><strong>1.284</strong><p><b class="up">+12,8%</b> <span>vs. mês anterior</span></p></article><article class="metric-card"><div class="metric-top"><span>Tempo médio de resposta</span><span class="metric-icon blue">◷</span></div><strong>18h <small>42min</small></strong><p><b class="down">-8,4%</b> <span>mais rápido</span></p></article><article class="metric-card"><div class="metric-top"><span>Resolvidas no prazo</span><span class="metric-icon yellow">✓</span></div><strong>92,6<small>%</small></strong><p><b class="up">+3,1%</b> <span>vs. mês anterior</span></p></article><article class="metric-card"><div class="metric-top"><span>Satisfação cidadã</span><span class="metric-icon lilac">✦</span></div><strong>4,8<small>/5</small></strong><p><b class="up">+0,2</b> <span>últimos 30 dias</span></p></article></section>
+        <section class="content-grid">
+          <article class="panel chart-panel" id="analytics"><div class="panel-heading"><div><p class="overline">VOLUME DE ATENDIMENTO</p><h2>Solicitações por período</h2></div><select id="chartPeriod" aria-label="Período do gráfico"><option>Últimos 30 dias</option><option>Últimos 7 dias</option></select></div><div class="chart-legend"><span><i class="legend-dot primary"></i>Recebidas</span><span><i class="legend-dot secondary"></i>Resolvidas</span></div><div class="chart" aria-label="Gráfico de solicitações recebidas e resolvidas"><div class="y-labels"><span>400</span><span>300</span><span>200</span><span>100</span><span>0</span></div><div class="chart-area"><div class="grid-lines"><i></i><i></i><i></i><i></i><i></i></div><div class="bars" id="bars"></div><div class="x-labels"><span>01 AGO</span><span>08 AGO</span><span>15 AGO</span><span>22 AGO</span><span>28 AGO</span></div></div></div></article>
+          <article class="panel priority-panel"><div class="panel-heading"><div><p class="overline">ATENÇÃO DA EQUIPE</p><h2>Fila prioritária</h2></div><button class="dots-button" type="button" aria-label="Mais opções">···</button></div><div class="priority-list"><button class="priority-item" data-request="Iluminação apagada na Rua Harmonia"><span class="priority-tag urgent">Urgente</span><strong>Iluminação apagada na Rua Harmonia</strong><small>Vila Madalena · há 24 min</small><span>→</span></button><button class="priority-item" data-request="Árvore com risco de queda"><span class="priority-tag attention">Atenção</span><strong>Árvore com risco de queda</strong><small>Pinheiros · há 1h</small><span>→</span></button><button class="priority-item" data-request="Buraco ocupa faixa da avenida"><span class="priority-tag normal">Em análise</span><strong>Buraco ocupa faixa da avenida</strong><small>Moema · há 2h</small><span>→</span></button></div><a class="panel-link" href="#requests">Ver todas as solicitações <span>↗</span></a></article>
+        </section>
+        <section class="panel requests-panel" id="requests"><div class="panel-heading"><div><p class="overline">MONITORAMENTO</p><h2>Solicitações recentes</h2></div><div class="table-actions"><label class="table-search"><span>⌕</span><input id="requestSearch" type="search" placeholder="Buscar solicitação..."></label><select id="requestFilter" aria-label="Filtrar solicitações"><option value="all">Todos os status</option><option value="open">Em andamento</option><option value="done">Resolvida</option></select></div></div><div class="table-wrap"><table><thead><tr><th>Solicitação</th><th>Categoria</th><th>Região</th><th>Atualização</th><th>Status</th><th><span class="sr-only">Ação</span></th></tr></thead><tbody id="requestRows"></tbody></table><p class="empty-state" id="emptyState">Nenhuma solicitação encontrada.</p></div></section>
+        <footer class="footer-note"><span>© 2026 Cívica Platform</span><span>Dados atualizados em tempo real <i></i></span></footer>
+      </div>
+    </main>
+  </div>
+  <dialog id="requestDialog"><button class="dialog-close" id="closeDialog" type="button" aria-label="Fechar">×</button><p class="overline">DETALHE DA SOLICITAÇÃO</p><h2 id="dialogTitle">Solicitação</h2><p id="dialogDescription">A equipe responsável foi notificada e acompanhará este caso.</p><div class="dialog-meta"><span><small>Prioridade</small><b id="dialogPriority">Atenção</b></span><span><small>Responsável</small><b>Equipe de campo · SP</b></span></div><button class="primary-button" id="dialogAction" type="button">Acompanhar ocorrência</button></dialog>
+</body>
+</html>

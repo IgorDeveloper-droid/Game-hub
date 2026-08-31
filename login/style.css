@@ -1,0 +1,195 @@
+:root {
+    --background: #101816;
+    --surface: #f4f0e6;
+    --text: #14211f;
+    --muted: #71807b;
+    --accent: #d8f45b;
+    --line: #d9dfd3;
+    --danger: #b84c4c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    color: var(--text);
+    font-family: Georgia, 'Times New Roman', serif;
+    background: var(--background);
+}
+
+body::before {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    content: '';
+    opacity: .18;
+    pointer-events: none;
+    background-image: linear-gradient(rgba(216, 244, 91, .2) 1px, transparent 1px), linear-gradient(90deg, rgba(216, 244, 91, .2) 1px, transparent 1px);
+    background-size: 48px 48px;
+}
+
+.container {
+    display: grid;
+    min-height: 100vh;
+    padding: 32px 20px;
+    place-items: center;
+}
+
+.login-card {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 440px);
+    padding: 44px;
+    background: var(--surface);
+    box-shadow: 18px 18px 0 rgba(216, 244, 91, .12);
+}
+
+.brand-mark {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    margin-bottom: 30px;
+    color: var(--accent);
+    background: var(--text);
+    font: 32px Arial, sans-serif;
+    place-items: center;
+}
+
+.eyebrow {
+    margin: 0 0 14px;
+    color: var(--muted);
+    font: 11px 'Courier New', monospace;
+    letter-spacing: .18em;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(32px, 7vw, 48px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.subtitle {
+    margin: 16px 0 34px;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.field-group {
+    margin-bottom: 21px;
+}
+
+label,
+.label-row {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label-row label {
+    margin: 0;
+}
+
+a {
+    color: #527466;
+    font-size: 13px;
+}
+
+input[type='text'],
+input[type='password'] {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid var(--line);
+    outline: none;
+    color: var(--text);
+    background: #fffdf8;
+    font: 16px 'Courier New', monospace;
+}
+
+input:focus {
+    border-color: #527466;
+    box-shadow: 0 0 0 3px rgba(82, 116, 102, .14);
+}
+
+.password-wrapper {
+    display: flex;
+}
+
+.password-wrapper input {
+    min-width: 0;
+}
+
+#togglePassword {
+    border: 1px solid var(--line);
+    border-left: 0;
+    padding: 0 13px;
+    color: var(--muted);
+    background: #fffdf8;
+    cursor: pointer;
+}
+
+.remember-me {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    margin: 2px 0 25px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.remember-me input {
+    accent-color: #527466;
+}
+
+.submit-button {
+    width: 100%;
+    border: 0;
+    padding: 16px;
+    color: var(--text);
+    background: var(--accent);
+    font: 700 15px 'Courier New', monospace;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background: #c9e94a;
+}
+
+.field-error,
+.form-message {
+    display: block;
+    min-height: 18px;
+    margin: 7px 0 0;
+    color: var(--danger);
+    font-size: 12px;
+}
+
+.form-message {
+    text-align: center;
+}
+
+.form-message.success {
+    color: #527466;
+}
+
+.signup-text {
+    margin: 30px 0 0;
+    color: var(--muted);
+    text-align: center;
+    font-size: 13px;
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 32px 24px;
+    }
+}

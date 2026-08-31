@@ -1,121 +1,296 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio profissional de desenvolvimento front-end, design de interfaces e projetos digitais."
+    />
+    <title>Igor Dev | Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-one"></div>
+    <div class="bg-orb orb-two"></div>
 
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <div class="logo">GamesHub</div>
-                <div class="search-box">
-                    <i class="fas fa-search search-icon"></i>
-                    <input type="text" class="search-input" id="search" placeholder="Buscar games, troféus, guias...">
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#" class="nav-link active" data-section="home"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="#games" class="nav-link" data-section="games"><i class="fas fa-gamepad"></i> Games</a></li>
-                    <li><a href="#trophies" class="nav-link" data-section="trophies"><i class="fas fa-trophy"></i> Troféus</a></li>
-                    <li><a href="#guides" class="nav-link" data-section="guides"><i class="fas fa-book"></i> Guias</a></li>
-                    <li><a href="#news" class="nav-link" data-section="news"><i class="fas fa-newspaper"></i> Notícias</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#top" class="brand" aria-label="Página inicial">
+          <span class="brand-mark">I</span>
+          <span class="brand-text">Igor Dev</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="#sobre">Sobre</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
     </header>
 
-    <section id="home" class="hero section active">
-        <div class="container">
-            <h1>Seu Portal Completo de Games</h1>
-            <p>Guias de troféus detalhados, detonados completos, tutoriais, notícias de lançamentos e novidades do mundo dos games em um só lugar.</p>
-            <a href="#games" class="btn">Explorar Games</a>
-        </div>
-    </section>
+    <main id="top">
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <span class="eyebrow">Desenvolvedor Front-End</span>
+            <h1>
+              Transformo ideias em experiências digitais
+              <span>claras, modernas e funcionais.</span>
+            </h1>
+            <p>
+              Sou Igor, desenvolvedor focado em interfaces intuitivas, performance e
+              arquitetura simples que entregam resultado real para marcas e produtos.
+            </p>
 
-    <section id="games" class="section">
-        <div class="container">
-            <h2 class="section-title">Catálogo de Games</h2>
-            <div class="grid">
-                <!-- Games renderizados via JS -->
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#projetos">Ver projetos</a>
+              <a class="btn btn-secondary" href="#contato">Falar comigo</a>
             </div>
-        </div>
-    </section>
 
-    <section id="trophies" class="section">
-        <div class="container">
-            <h2 class="section-title">Guias de Troféus</h2>
-            <p style="text-align:center;color:var(--text-secondary);margin-bottom:3rem;">Taxa de conquista e guias passo a passo para Platina!</p>
-            <div class="grid">
-                <!-- Trophies renderizados via JS -->
-            </div>
-        </div>
-    </section>
+            <ul class="hero-stats" aria-label="Estatísticas pessoais">
+              <li>
+                <strong>+3</strong>
+                <span>Projetos entregues</span>
+              </li>
+              <li>
+                <strong>100%</strong>
+                <span>Foco em UX</span>
+              </li>
+              <li>
+                <strong>24/7</strong>
+                <span>Aprendizado contínuo</span>
+              </li>
+            </ul>
+          </div>
 
-    <section id="guides" class="section">
-        <div class="container">
-            <h2 class="section-title">Detonados e Tutoriais</h2>
-            <p style="text-align:center;color:var(--text-secondary);margin-bottom:3rem;">Guias completos 100% e tutoriais detalhados</p>
-            <div class="grid">
-                <!-- Guides renderizados via JS -->
-            </div>
-        </div>
-    </section>
+          <div class="hero-visual reveal">
+            <div class="profile-card">
+              <div class="profile-header">
+                <span class="status-pill">Disponível para projetos</span>
+              </div>
 
-    <section id="news" class="section">
-        <div class="container">
-            <h2 class="section-title">Últimas Notícias</h2>
-            <p style="text-align:center;color:var(--text-secondary);margin-bottom:3rem;">Lançamentos, trailers e novidades do mundo gamer</p>
-            <div class="grid">
-                <!-- News renderizados via JS -->
-            </div>
-        </div>
-    </section>
+              <div class="avatar-wrap">
+                <div class="avatar-ring"></div>
+                <div class="avatar-core">
+                  <span>IG</span>
+                </div>
+              </div>
 
-    <!-- Modal -->
-<div id="gameModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 id="modalTitle"></h2>
-        <div class="tabs">
-            <button class="tab-btn active" data-tab="description">Descrição</button>
-            <button class="tab-btn" data-tab="trophiesTab">Troféus</button>
-            <button class="tab-btn" data-tab="detonado">Detonado</button>
-            <button class="tab-btn" data-tab="curiosidades">Curiosidades</button>
-            <button class="tab-btn" data-tab="tutorial">Tutoriais</button>
-        </div>
-        <div id="description" class="tab-content active">
-            <p id="modalDescription"></p>
-        </div>
-        <div id="trophiesTab" class="tab-content">
-            <div id="modalTrophies"></div>
-        </div>
-        <div id="detonado" class="tab-content">
-            <p id="modalDetonado"></p>
-        </div>
-        <div id="curiosidades" class="tab-content">
-            <ul id="modalCuriosidades"></ul>
-        </div>
-        <div id="tutorial" class="tab-content">
-            <ul id="modalTutorial"></ul>
-        </div>
-    </div>
-</div>
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="#"><i class="fab fa-twitch"></i> Twitch</a>
-                <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
-                <a href="#"><i class="fab fa-discord"></i> Discord</a>
-                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+              <div class="card-panel panel-top">
+                <span class="panel-label">Especialidade</span>
+                <strong>UI / UX + Front-End</strong>
+              </div>
+
+              <div class="mini-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JS</span>
+                <span>Python</span>
+              </div>
+
+              <div class="card-panel panel-bottom">
+                <div>
+                  <span class="panel-label">Projetos ativos</span>
+                  <strong>08</strong>
+                </div>
+                <div>
+                  <span class="panel-label">Tempo de estudo</span>
+                  <strong>1 ano</strong>
+                </div>
+              </div>
             </div>
-            <p>&amp;copy; 2024 GamesHub. Todos os direitos reservados. | Feito com <i class="fas fa-gamepad"></i></p>
+          </div>
         </div>
+      </section>
+
+      <section id="sobre" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Sobre</span>
+            <h2>Construo soluções digitais com atenção à clareza, usabilidade e impacto.</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card reveal">
+              <p>
+                Meu trabalho combina desenvolvimento, design visual e raciocínio funcional para
+                criar experiências digitais que ajudam pessoas e negócios a tomar decisões com mais
+                confiança.
+              </p>
+              <p>
+                Acredito que a tecnologia deve ser acessível, elegante e útil. Por isso, cada projeto
+                que desenvolvo busca unir estética profissional com funcionalidade prática e boa
+                performance.
+              </p>
+            </div>
+
+            <div class="skills-panel reveal">
+              <h3>Tecnologias</h3>
+              <div class="chip-list">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>Git</span>
+                <span>UI Design</span>
+                <span>Responsividade</span>
+                <span>UX Writing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projetos" class="section dark-section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Projetos</span>
+            <h2>Portfólio com foco em interfaces, dashboards e experiências digitais.</h2>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <div class="project-top">
+                <span class="badge">Dashboard</span>
+                <span class="dot"></span>
+              </div>
+              <h3>Cívica Ops</h3>
+              <p>
+                Painel operacional urbano com indicadores, fila prioritária, tabela interativa e
+                visão inteligente para gestão de atendimento.
+              </p>
+              <ul>
+                <li>UX para gestão pública</li>
+                <li>Layout responsivo</li>
+                <li>Visualização de métricas</li>
+              </ul>
+              <a href="civica.html" target="_blank" rel="noreferrer">Abrir projeto</a>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-top">
+                <span class="badge">Financeiro</span>
+                <span class="dot"></span>
+              </div>
+              <h3>Controle Financeiro</h3>
+              <p>
+                Sistema local para registrar receitas, despesas e resumo financeiro com organização por
+                categoria, mês e saldo final.
+              </p>
+              <ul>
+                <li>Banco local SQLite</li>
+                <li>Relatórios rápidos</li>
+                <li>Gestão de lançamentos</li>
+              </ul>
+              <a href="financeiro.py" target="_blank" rel="noreferrer">Ver código</a>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-top">
+                <span class="badge">Portal</span>
+                <span class="dot"></span>
+              </div>
+              <h3>Prefeitura Digital</h3>
+              <p>
+                Conceito de portal institucional para comunicação, serviços e acesso rápido às áreas de
+                atendimento público.
+              </p>
+              <ul>
+                <li>Design institucional</li>
+                <li>Estrutura de portal</li>
+                <li>Experiência moderna</li>
+              </ul>
+              <a href="prefeitura.html" target="_blank" rel="noreferrer">Abrir conceito</a>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-top">
+                <span class="badge">Acesso</span>
+                <span class="dot"></span>
+              </div>
+              <h3>Cadastro e Login</h3>
+              <p>
+                Fluxos de autenticação e cadastro com visual limpo, empatia digital e estrutura útil para
+                experiências web básicas.
+              </p>
+              <ul>
+                <li>Autenticação</li>
+                <li>Fluxo completo</li>
+                <li>Prototipagem web</li>
+              </ul>
+              <a href="cadastro/index.html" target="_blank" rel="noreferrer">Abrir fluxo</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicos" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Serviços</span>
+            <h2>Atendimento em desenvolvimento de interfaces e produtos digitais.</h2>
+          </div>
+
+          <div class="service-grid">
+            <div class="service-card reveal">
+              <div class="icon-box">01</div>
+              <h3>Landing Pages</h3>
+              <p>Estruturas atrativas para captar atenção, destacar valor e converter visitas em contato.</p>
+            </div>
+
+            <div class="service-card reveal">
+              <div class="icon-box">02</div>
+              <h3>Dashboards</h3>
+              <p>Visualização de dados clara, organizada e pensada para tomada de decisão rápida.</p>
+            </div>
+
+            <div class="service-card reveal">
+              <div class="icon-box">03</div>
+              <h3>Interfaces Web</h3>
+              <p>Experiências modernas com foco em usabilidade, acessibilidade e responsividade em todas as telas.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="section cta-section">
+        <div class="container">
+          <div class="cta-banner reveal">
+            <div>
+              <span class="eyebrow">Contato</span>
+              <h2>Vamos criar algo útil, bonito e eficiente.</h2>
+            </div>
+            <a class="btn btn-primary" href="mailto:igor.dev@email.com">Entre em contato</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>© <span id="year"></span> Igor Dev. Todos os direitos reservados.</p>
+        <div class="footer-links">
+          <a href="#sobre">Sobre</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#contato">Contato</a>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
